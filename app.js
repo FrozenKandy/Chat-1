@@ -13,7 +13,7 @@ var express        =  require('express'),
 
 
 var todoListRoute = require("./routes/route");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT; 
 app.use(methodOverride("_method"));
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
