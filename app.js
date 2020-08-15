@@ -13,7 +13,7 @@ var todoListRoute = require("./routes/route");
 
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine" , "ejs");
 app.use(express.static("public"));
