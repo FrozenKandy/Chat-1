@@ -1,3 +1,4 @@
+import dotenv 
 require('dotenv').config()
 
 var express        =  require('express'),
@@ -12,10 +13,10 @@ var express        =  require('express'),
 
 
 var todoListRoute = require("./routes/route");
-
+const port = process.env.PORT || 3000;
 app.use(methodOverride("_method"));
-
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
+var mongoose1 = require('mongoose');
+mongoose1.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine" , "ejs");
 app.use(express.static("public"));
@@ -48,6 +49,6 @@ app.use(function(req,res,next){
 app.use(todoListRoute);
 
 
-app.listen(process.env.PORT , function () {
+app.listen(port , function () {
 	console.log("Server has started");
 });
