@@ -15,8 +15,8 @@ var express        =  require('express'),
 var todoListRoute = require("./routes/route");
 const port = process.env.PORT || 3000;
 app.use(methodOverride("_method"));
-var mongoose1 = require('mongoose');
-mongoose1.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/todo_list3" , {useNewUrlParser: true ,  useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine" , "ejs");
 app.use(express.static("public"));
