@@ -1,0 +1,39 @@
+<%- include ('./partial/header') %>
+
+
+<div class="container">
+  <h1 class="head" id="head">To-Do List<span><i class="fas fa-plus"></i></span></h1>
+  <form class="" action="/<%= currentUser._id %>/new" method="post">
+    <input type="text" name="newitem" placeholder="Add New Todo" autofocus>
+    <button class="sub" type="submit" name="button">Submit</button>
+  </form>
+
+  <ul>
+    <% user.list.forEach(function(lt){ %>
+
+      <li>
+        <a id="tr" href="<%= user._id %>/<%= lt._id %>/del"><i class="fas fa-trash-alt"></i></a>
+
+<% if(lt.completed == 0){ %>
+
+   <a id="items" href="<%= user._id %>/<%= lt._id %>/completed">  <%= lt.item %>  </a>
+
+   <% } else if(lt.completed == 1){ %>
+
+    <a id="items" class="completed" href="<%= user._id %>/<%= lt._id %>/completed">  <%= lt.item %>  </a>
+
+  <% } %>
+
+      </li>
+    <% }); %>
+
+  </ul>
+</div>
+<a class="ld-signup" href="/">Back</a>
+<a class="ld-logout" href="/logout">Logout</a>
+
+
+
+
+
+<%- include ('./partial/footer') %>

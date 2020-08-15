@@ -1,0 +1,221 @@
+body {
+	background: linear-gradient(90deg, #2bc0e4 10%, #eaecc6 90%) ;
+	font-family: sans-serif;
+}
+
+/********************************    Main   *****************************/
+
+.sub {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 40px;
+	background-color: rgb(34,177,76) ;
+	border : 0;
+	font-size: 20px ;
+	color: white;
+	font-family: sans-serif;
+	transition: 0.5s;
+}
+
+.sub:hover {
+	background: #2980b9
+}
+
+.container {
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	width: 100vh ;
+	margin : 100px auto;
+	background-color: #f7f7f7;
+	max-width: 100% ;
+}
+
+.container ul {
+	list-style: none ;
+	margin : 0;
+	padding: 0;
+}
+
+h1.head {
+	background-color: #2980b9 ;
+	color: white ;
+	margin: 0 ;
+	padding: 10px 20px ;
+	text-transform: uppercase;
+	font-size: 24px ;
+	font-weight: normal;
+	font-family: sans-serif;
+}
+
+li {
+	background-color: #fff ;
+	height: 40px ;
+	line-height: 40px ;
+	color: #666;
+	font-size: 18px;
+}
+
+li:nth-child(2n) {
+	background-color: #f7f7f7 ;
+}
+
+input {
+	font-size: 18px ;
+	background-color: #f7f7f7;
+	width: 100% ;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 2px #f7f7f7 solid;
+	color: #2980b9;
+}
+
+input:focus {
+	border : 2px #2980b9 solid;
+	background-color: white ;
+	outline: none;
+}
+
+.fa-plus {
+	float: right;
+}
+
+a#tr{
+	background-color: #e74c3c ;
+	color: white;
+	height: 40px ;
+	margin-right: 20px;
+	text-align: center;
+	width: 0 ;
+	display: inline-block;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+li:hover a#tr{
+	width: 40px ;
+	opacity: 1;
+}
+
+a#items {
+		background-color: #fff ;
+		height: 40px ;
+		line-height: 40px ;
+		color: #666;
+		font-size: 18px;
+		text-decoration: none;
+}
+
+.completed {
+	color : rgb(150,150,150) !important;
+	text-decoration: line-through !important;
+}
+
+
+/****************   Landing page ***************************/
+
+.ld-head {
+	color : rgb(100,100,100);
+	font-family: sans-serif;
+}
+
+div.ld-main {
+	margin : 200px auto;
+	text-align: center;
+}
+
+a.ld-login {
+	text-decoration: none;
+	background: rgb(18,176,209) ;
+	padding: 8px 18px ;
+	border-radius: 3px ;
+	font-size: 20px ;
+	color: white;
+	font-family: sans-serif;
+	display: block;
+	width: 100px;
+	margin: 15px auto;
+}
+
+a.ld-signup {
+	text-decoration: none;
+	background: rgb(34,177,76) ;
+	padding: 8px 18px ;
+	border-radius: 3px ;
+	font-size: 20px ;
+	color: white;
+	font-family: sans-serif;
+	display: block;
+	width: 100px;
+	margin: 15px auto;
+	text-align: center;
+}
+
+a.ld-signup:hover {
+	background: rgb(34,230,76) ;
+}
+
+a.ld-login:hover {
+	background: rgb(18,176,250) ;
+}
+
+a.ld-logout:hover {
+	background: rgb(255,41,41) ;
+}
+
+a.ld-logout {
+	text-decoration: none;
+	background: rgb(200,41,41) ;
+	padding: 8px 18px ;
+	border-radius: 3px ;
+	font-size: 20px ;
+	color: white;
+	font-family: sans-serif;
+	display: block;
+	width: 100px;
+	margin: 15px auto;
+	text-align: center;
+}
+
+
+/***************     login and register form ************************/
+
+h1.lr {
+	margin-top: 150px !important;
+	color : rgb(100,100,100);
+	font-family: sans-serif;
+}
+
+form.log-reg {
+	margin: 12px auto;
+}
+
+input.lr-i {
+	width : 250px;
+	height: 40px ;
+	margin: 8px;
+	border-radius: 5px;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+button.lr {
+	text-decoration: none;
+	background: rgb(34,177,76) ;
+	padding: 8px 18px ;
+	border-radius: 3px ;
+	font-size: 20px ;
+	color: white;
+	font-family: sans-serif;
+	display: block;
+	width: 100px;
+	margin: 15px auto;
+	text-align: center;
+	border : 0;
+}
+
+button.lr:hover {
+	background: rgb(34,230,76) ;
+}

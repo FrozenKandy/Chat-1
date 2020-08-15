@@ -1,0 +1,25 @@
+<%- include ('./partial/header') %>
+
+<div class="ld-main">
+  <div class="head">
+    <h1 class="ld-head">Create a Todo List</h1>
+    <% if(!currentUser){ %>
+    <h2 class="ld-head">Login to create Todo List</h2>
+    <% }  %>
+  </div>
+  <div class="link">
+    <% if(!currentUser){ %>
+    <a class="ld-login" href="/login">Login</a>
+    <a class="ld-signup" href="/register">Sign Up</a>
+    <% } else { %>
+      <a class="ld-signup" href="/<%= currentUser._id %>">List</a>
+      <a class="ld-logout" href="logout">Logout</a>
+    <% }  %>
+  </div>
+
+</div>
+
+
+
+
+<%- include ('./partial/footer') %>
