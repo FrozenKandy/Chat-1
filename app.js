@@ -46,6 +46,6 @@ app.use(function(req,res,next){
 app.use(todoListRoute);
 
 
-app.listen(processenv.PORT , function () {
+app.listen(process.env.PORT , function () {
 	console.log("Server has started");
 });
